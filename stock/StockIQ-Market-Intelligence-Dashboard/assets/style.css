@@ -1,0 +1,222 @@
+/* ============================================================
+   StockIQ Dashboard — Custom Stylesheet
+   Dark finance theme: precision over decoration
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Root & Reset ─────────────────────────────────────────── */
+:root {
+  --bg-base:    #0d1117;
+  --bg-surface: #161b22;
+  --bg-card:    #1c2128;
+  --border:     #30363d;
+  --text-pri:   #e6edf3;
+  --text-sec:   #8b949e;
+  --text-mute:  #484f58;
+  --green:      #26a69a;
+  --red:        #ef5350;
+  --blue:       #42a5f5;
+  --purple:     #ab47bc;
+  --amber:      #ffca28;
+  --radius:     8px;
+}
+
+html, body, [class*="css"] {
+  font-family: 'Inter', sans-serif !important;
+  background-color: var(--bg-base) !important;
+  color: var(--text-pri) !important;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────── */
+section[data-testid="stSidebar"] {
+  background: var(--bg-surface) !important;
+  border-right: 1px solid var(--border) !important;
+}
+
+.sidebar-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-pri);
+  letter-spacing: -0.5px;
+}
+
+.sidebar-sub {
+  font-size: 11px;
+  color: var(--text-sec);
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+/* Sidebar inputs */
+section[data-testid="stSidebar"] .stSelectbox > div > div,
+section[data-testid="stSidebar"] .stRadio  > div {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* ── Header Block ─────────────────────────────────────────── */
+.header-block {
+  padding: 18px 0 10px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.ticker-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-sec);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ticker-symbol {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-mute);
+  margin-bottom: 6px;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.price {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--text-pri);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.change {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.positive { color: var(--green) !important; }
+.negative { color: var(--red)   !important; }
+
+/* ── Metric Cards ─────────────────────────────────────────── */
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.metric-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 5px;
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-pri);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.metric-note {
+  font-size: 10px;
+  color: var(--amber);
+  margin-top: 3px;
+}
+
+/* ── Chart containers ─────────────────────────────────────── */
+[data-testid="stPlotlyChart"] {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-card) !important;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+  background: transparent !important;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.stTabs [data-baseweb="tab"] {
+  background: transparent !important;
+  border: none !important;
+  color: var(--text-sec) !important;
+  font-size: 13px;
+  padding: 8px 18px;
+}
+
+.stTabs [aria-selected="true"] {
+  color: var(--text-pri) !important;
+  border-bottom: 2px solid var(--blue) !important;
+}
+
+/* ── Dataframe ────────────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.stButton > button {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-pri) !important;
+  font-size: 13px;
+  border-radius: var(--radius) !important;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.stButton > button:hover {
+  border-color: var(--blue) !important;
+  background: rgba(66,165,245,0.08) !important;
+}
+
+/* ── Download Button ──────────────────────────────────────── */
+.stDownloadButton > button {
+  background: linear-gradient(135deg, #26a69a22, #26a69a11) !important;
+  border: 1px solid var(--green) !important;
+  color: var(--green) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* ── Toggle ───────────────────────────────────────────────── */
+.stToggle > label { font-size: 13px !important; color: var(--text-sec) !important; }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-mute);
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Dividers ─────────────────────────────────────────────── */
+hr { border-color: var(--border) !important; }
+
+/* ── Spinner / Info / Warning ─────────────────────────────── */
+.stAlert {
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
+  background: var(--bg-card) !important;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
