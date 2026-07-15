@@ -8,7 +8,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![Plotly](https://img.shields.io/badge/Plotly-5.22+-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
-[![CI](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/Bansaripatel02/StockIQ-Market-Intelligence-Dashboard/actions)
+[![CI](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/bhavikpatel13/StockIQ-Market-Intelligence-Dashboard/actions)
 
 <br/>
 
@@ -291,9 +291,9 @@ Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ## 👤 Author
 
-**Bansari Patel**
+**Bhavik Patel**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Bansaripatel02-181717?style=flat-square&logo=github)](https://github.com/Bansaripatel02)
+[![GitHub](https://img.shields.io/badge/GitHub-bhavikpatel13-181717?style=flat-square&logo=github)](https://github.com/bhavikpatel13)
 
 ---
 
